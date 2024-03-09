@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/ed_NTD"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="24dp"
@@ -35,11 +35,12 @@
             android:text="GO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
+            android:id="@+id/btn_GO"
+            app:layout_constraintTop_toBottomOf="@+id/ed_NTD"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="16dp"
+            android:onClick="go" />
 
     <TextView
             android:text="JP"
@@ -47,7 +48,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/btn_GO"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -58,7 +59,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/btn_GO"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -88,7 +89,7 @@
             android:text="None"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5"
+            android:id="@+id/text_USD"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             android:layout_marginStart="8dp"
