@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
             NTD = Float.parseFloat(strNTD);
             DecimalFormat df = new DecimalFormat("###.####");
             USD = NTD / 30.9f;
-            String message = "USD is "+ df.format(USD);
-            new AlertDialog.Builder(this).setTitle("Result")
+            String message = getString(R.string.usd_is)+ df.format(USD);
+            new AlertDialog.Builder(this).setTitle(R.string.result)
                     .setMessage(message)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             edUSD.setText(message);
@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (NumberFormatException e) {
             new AlertDialog.Builder(this)
-                    .setTitle("Problem")
-                    .setMessage("Please enter you NTD amount")
-                    .setPositiveButton("OK",null)
+                    .setTitle(R.string.problem)
+                    .setMessage(R.string.please_enter_you_ntd_amount)
+                    .setPositiveButton(getString(R.string.ok),null)
                     .show();
         }
 
